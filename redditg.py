@@ -26,7 +26,7 @@ def is_image(url):
 
 async def fetch_and_send_posts():
     subreddit = reddit.subreddit(environ.get('SUBREDDIT'))
-    for submission in subreddit.top(limit=20, time_filter="hour"):
+    for submission in subreddit.top(limit=20, time_filter="day"):
         if r.exists(submission.id):
             continue
         if submission.over_18 and not is_image(submission.url):
