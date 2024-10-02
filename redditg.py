@@ -46,6 +46,7 @@ async def fetch_and_send_posts():
                             Keep the message short and concise (no longer than 600 characters).
                             Always include a bold headline using single asterisks (*) for the title.
                             Use only single asterisks (*) for bold text (no other markdown formatting).
+                            Avoid using emotional language or capital letters.
                              '''},
                             {"type": "text", "text": submission.title},
                         ],
